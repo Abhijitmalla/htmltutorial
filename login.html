@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Form</title>
+  <link rel="stylesheet" href="loginstyle.css">
+
+  
+</head>
+<body>
+  <div class="login-container">
+    <form class="login-form">
+      <h2>Login</h2>
+      <div class="input-container">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required>
+      </div>
+      <div class="input-container">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <button type="submit" class="btn" id="log" onclick="Onclick()">Login</button>
+      <p>Don't have an account? <a href="register.html" onclick="toggleForm('register')" style="color: red;">Register </a></p>
+
+    </form>
+  </div>
+  <script>
+  function Onclick()
+  {
+    var userName=document.getElementById("username").value;
+    var passWord=document.getElementById("password").value;
+if(userName=="Abhijit" && passWord=="7071")
+{
+  alert('Login successfully');
+}
+else{
+  alert('wrong username or password');
+}
+  }
+  </script>
+</body>
+</html>
